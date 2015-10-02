@@ -1,0 +1,37 @@
+{
+  "name": "marky-deep-links",
+  "version": "1.0.0",
+  "author": "Dan Flettre <fletd01@yahoo.com>",
+  "bugs": {
+    "url": "https://github.com/Flet/marky-deep-links/issues"
+  },
+  "description": "Make heading links work in marky-markdown generated HTML",
+  "devDependencies": {
+    "standard": "*",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.0"
+  },
+  "homepage": "https://github.com/Flet/marky-deep-links",
+  "keywords": [
+    "browser",
+    "browserify",
+    "marky-markdown",
+    "deep",
+    "links",
+    "heading",
+    "dom"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Flet/marky-deep-links.git"
+  },
+  "scripts": {
+    "test": "standard && tape test/*.js | tap-spec"
+  },
+  "dependencies": {
+    "detect-dom-ready": "^1.0.2",
+    "hashchange": "^1.0.0"
+  }
+}
