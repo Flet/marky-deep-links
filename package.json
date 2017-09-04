@@ -7,9 +7,11 @@
   },
   "description": "Make heading links work in marky-markdown generated HTML",
   "devDependencies": {
+    "browserify": "^14.4.0",
     "standard": "*",
     "tap-spec": "^4.0.2",
-    "tape": "^4.0.0"
+    "tape": "^4.0.0",
+    "uglifyify": "^4.0.3"
   },
   "homepage": "https://github.com/Flet/marky-deep-links",
   "keywords": [
@@ -28,7 +30,16 @@
     "url": "https://github.com/Flet/marky-deep-links.git"
   },
   "scripts": {
-    "test": "standard && tape test/*.js | tap-spec"
+    "test": "standard && tape test/*.js | tap-spec",
+    "build:min": "browserify  -g uglifyify client.js -o marky-deep-links-standalone-min.js",
+    "build:pretty": "browserify client.js -o marky-deep-links-standalone.js",
+    "build": "npm run build:min && npm run build:pretty"
+  },
+  "standard": {
+    "ignore": [
+      "marky-deep-links-standalone.js",
+      "marky-deep-links-standalone-min.js"
+    ]
   },
   "dependencies": {
     "detect-dom-ready": "^1.0.2",
