@@ -3,9 +3,9 @@ module.exports = markyDeepLinks
 var hashchange = require('hashchange')
 var domReady = require('detect-dom-ready')
 
-function markyDeepLinks (prefix) {
+function markyDeepLinks (_prefix) {
   hashchange.update(function (hash) {
-    var prefix = prefix || 'user-content-'
+    var prefix = _prefix || 'user-content-'
 
     if (hash.indexOf(prefix) === 0) {
       hashchange.updateHash(hash.replace(prefix, ''))

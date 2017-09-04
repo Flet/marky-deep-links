@@ -30,6 +30,13 @@ markyDeepLinks()
 
 ```
 
+## Pre-built Files for Browsers
+For convenience, feel free to use the browserify generated files included in this package:
+- marky-deep-links-standalone-min.js (minified)
+- marky-deep-links-standalone.js (unminified)
+
+Note that these are set up to use the default `user-content-` prefix.
+
 ## Contributing
 
 Contributions welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first.
